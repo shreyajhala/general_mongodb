@@ -1,0 +1,8 @@
+  <h5>Gmail Contacts</h5><hr>
+  <table>
+  <th>Name</th><th>Email</th>
+  <% @contacts.each do |contact| %>
+  <tr><td> <%= contact[:name] %></td> <td><%= contact[:email] %></td></tr>
+  <% end %>
+  </table>
+  <%= link_to "Back", root_path %>

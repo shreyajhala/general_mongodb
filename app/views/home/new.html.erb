@@ -1,0 +1,9 @@
+<% if current_user.present? %>
+  <h2>Hello Welcome Back</h2>
+  <p>Name : <%= current_user.email.split('@').first %></p>
+  <p>Email : <%= current_user.email %></p>
+  <%= link_to "Invite Friends from Facebook", fb_oauth_invite_friends_path, :remote => true, :method => :post, :class => 'btn btn-primary' %>
+  <%= link_to "Gmail Contacts","/contacts/gmail", :class=>"btn-primary btn"%>
+<% else %>
+  <h1>Home Page</h1>
+<% end %>
